@@ -1,0 +1,53 @@
+html {
+  font-size: 12px;
+  background: url('./whiplash_still.jpeg') bottom center;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dongle', sans-serif;
+  font-size: 16px;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  /* border: .4rem solid black; */
+  border-radius: .5rem;
+  margin: 1rem;
+  /* font-size: 1.5rem; */
+  padding: 4px 8px;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(77, 112, 61, 0.699);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  background: rgba(142, 148, 180, 0.4);
+  border: 2px solid whitesmoke;
+}
+
+kbd {
+  display: block;
+  font-size: 5rem;
+  font-family: 'Dongle', sans-serif;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
