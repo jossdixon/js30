@@ -28,7 +28,7 @@ body,html {
   transition: all .07s ease;
   width: 10rem;
   text-align: center;
-  color: white;
+  color: whitesmoke;
   background: rgba(77, 112, 61, 0.699);
   text-shadow: 0 0 .5rem black;
 }
@@ -37,6 +37,7 @@ body,html {
   transform: scale(1.1);
   background: rgba(142, 148, 180, 0.4);
   border: 2px solid whitesmoke;
+  box-shadow: 0 0 4px inset black;
 }
 
 kbd {
