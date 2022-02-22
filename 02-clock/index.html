@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+  <title>Rock Around The Clock</title>
+</head>
+<body>
+  <div class="container">
+
+    <div class="key-container">
+      <div class="sec-key">
+        <h2>Seconds</h2>
+      </div>
+      <div class="min-key">
+        <h2>Minutes</h2>
+      </div>
+      <div class="hour-key">
+        <h2>Hours</h2>
+      </div>
+    </div>
+
+    <div class="clock">
+      <div class="clock-face">
+        <div class="center"></div>
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <style>
+    html {
+      background: darkslategray;
+      font-family: 'Work Sans', Arial, sans-serif;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+    }
+
+    .key-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .sec-key {
+      color: lightgoldenrodyellow;
+      /* padding: 0px 8px; */
+    }
+
+    .min-key {
+      color: goldenrod;
+      /* padding: 0px 8px; */
+    }
+
+    .hour-key {
+      color: darkgoldenrod;
+      /* padding: 0px 8px; */
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 20px solid darkgoldenrod;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+      0 0 0 4px rgba(0,0,0,0.1),
+      inset 0 0 0 3px goldenrod,
+      inset 0 0 10px goldenrod,
+      0 0 10px rgba(234, 229, 235, 0.699);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width: 50%;
+      height: 6px;
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.2, 1, 0.5, 2);
+    }
+
+    .second-hand {
+      background: lightgoldenrodyellow;
+    }
+
+    .min-hand {
+      background: goldenrod;
+    }
+
+    .hour-hand {
+      background: darkgoldenrod;
+    }
+
+    .center {
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      background: lightgoldenrodyellow;
+      position: absolute;
+      top: 139px;
+      left: 138px;
+      z-index: 1;
+    }
+
+  </style>
+
+  <script>
+    const secondHand = document.querySelector('.second-hand');
+    const minuteHand = document.querySelector('.min-hand');
+    const hourHand = document.querySelector('.hour-hand');
+
+    function setDate() {
+      const now = new Date();
+      const seconds = now.getSeconds();
+      const secondsDegrees = ((seconds / 60) * 360) + 90;
+      secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+      const minutes = now.getMinutes();
+      const minutesDegrees = ((minutes / 60) * 360) + 90;
+      minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+
+      const hours = now.getMinutes();
+      const hoursDegrees = ((minutes / 12)* 360) + 90;
+      hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+    }
+
+    setInterval(setDate, 1000);
+
+    setDate();
+
+  </script>
+</body>
+</html>
