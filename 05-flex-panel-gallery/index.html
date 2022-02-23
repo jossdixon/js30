@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Panels of Fuji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    html {
+      box-sizing: border-box;
+      background: #ffc600;
+      font-family: 'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .panels {
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .panel {
+      background: #6B0F9C;
+      box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+      color: whitesmoke;
+      text-align: center;
+      align-items: center;
+      /* Safari transitionend event.propertyName === flex */
+      /* Chrome + FF transitionend event.propertyName === flex-grow */
+      transition:
+        font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        background 0.2s;
+      font-size: 18px;
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel1 {
+      background-image: url(https://images.metmuseum.org/CRDImages/as/original/DP130155.jpg);
+    }
+
+    .panel2 {
+      background-image: url(http://www.japancrafts.co.uk/uploads/3/6/0/7/360764/s742281843915882896_p1861_i5_w1920.jpeg);
+    }
+
+    .panel3 {
+      background-image: url(http://lcweb2.loc.gov/service/pnp/jpd/02400/02475v.jpg);
+    }
+
+    .panel4 {
+      background-image: url(https://images.metmuseum.org/CRDImages/as/original/DP141017.jpg);
+    }
+
+    .panel5 {
+      background-image: url(https://images.metmuseum.org/CRDImages/as/original/DP140999.jpg);
+    }
+
+    /* Flex Children */
+    .panel > * {
+      margin: 0;
+      width: 100%;
+      transition: transform 0.5s;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .panel p {
+      text-transform: uppercase;
+      font-family: 'Special Elite', serif;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      font-size: 2em;
+    }
+
+    .panel p:nth-child(2) {
+      font-size: 4em;
+    }
+
+    .panel.open {
+      font-size: 40px;
+    }
+  </style>
+
+
+  <div class="panels">
+    <div class="panel panel1">
+      <p>The Great Wave</p>
+      <p>1</p>
+      <p>Kanagawa</p>
+    </div>
+    <div class="panel panel2">
+      <p>Clear Morning</p>
+      <p>2</p>
+      <p>Fuji</p>
+    </div>
+    <div class="panel panel3">
+      <p>Thunderstorm</p>
+      <p>3</p>
+      <p>Fuji</p>
+    </div>
+    <div class="panel panel4">
+      <p>Mannen Bridge</p>
+      <p>4</p>
+      <p>Fukagawa</p>
+    </div>
+    <div class="panel panel5">
+      <p>Sundai</p>
+      <p>5</p>
+      <p>Surugadai</p>
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+
+
+
+</body>
+
+</html>
