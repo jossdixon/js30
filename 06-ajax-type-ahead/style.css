@@ -1,8 +1,6 @@
 html {
   box-sizing: border-box;
-  background-image: url('https://preview.redd.it/o2so00q9jbn71.jpg?auto=webp&s=a5174391b91d8c0054dae65660a5d24b67961562');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: darkslategray;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
   font-weight: 200;
